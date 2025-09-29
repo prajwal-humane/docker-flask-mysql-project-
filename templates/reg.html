@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Employee</title>
+</head>
+<body>
+  <h1>Add Employee</h1>
+  <form action="{{ url_for('add') }}" method="POST">
+    <p>ID: <input type="number" name="eid" required></p>
+    <p>Name: <input type="text" name="ename" required></p>
+    <p>Salary: <input type="number" name="esal" required></p>
+    <p>Address: <input type="text" name="eaddr" required></p>
+    <p>Gender:
+      <input type="radio" name="egender" value="Male" required>Male
+      <input type="radio" name="egender" value="Female" required>Female
+    </p>
+    <button type="submit">Add</button>
+  </form>
+  <p><a href="{{ url_for('index') }}">Back to List</a></p>
+</body>
+</html>
